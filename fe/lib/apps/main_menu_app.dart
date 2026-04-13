@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../cau1/apps/cau1_app.dart';
 import '../cau2/apps/cau2_app.dart';
 import '../cau3/apps/cau3_app.dart';
+import '../cau4/apps/cau4_app.dart';
+import '../cau5/apps/cau5_app.dart';
 
 class MainMenuApp extends StatelessWidget {
   const MainMenuApp({super.key});
@@ -71,6 +73,26 @@ class MenuScreen extends StatelessWidget {
               );
             },
             child: const Text('Vào Câu 3: Home → Settings (Direct Route)'),
+          ),
+          const SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Cau4App()),
+              );
+            },
+            child: const Text('Vào Câu 4: List → Detail (Pass object)'),
+          ),
+          const SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Cau5App()),
+              );
+            },
+            child: const Text('Vào Câu 5: Home ⇄ Pick Color (Return Data)'),
           ),
         ],
       ),
